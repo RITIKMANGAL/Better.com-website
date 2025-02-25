@@ -1,0 +1,126 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+header {
+  background: #fff;
+  border-bottom: 1px solid #eaeaea;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  margin: 0 1rem;
+  font-weight: 600;
+  color: #0070f3;
+  position: relative;
+  padding-bottom: 0.2rem;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #0070f3;
+  left: 50%;
+  bottom: 0;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #005bb5;
+}
+
+nav a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Footer */
+footer {
+  background: #f9f9f9;
+  padding: 1rem 0;
+  text-align: center;
+  border-top: 1px solid #eaeaea;
+  margin-top: 2rem;
+}
+
+/* Buttons */
+button,
+a.button {
+  display: inline-block;
+  background-color: #0070f3;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover,
+a.button:hover {
+  background-color: #005bb5;
+  transform: translateY(-2px);
+}
+
+/* Global Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  nav {
+    flex-direction: column;
+  }
+  
+  nav a {
+    margin: 0.5rem 0;
+  }
+}
